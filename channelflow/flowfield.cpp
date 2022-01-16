@@ -27,6 +27,7 @@
 
 // Decide if and how (if parallel) NetCDF may be used
 #ifdef HAVE_NETCDF_PAR_H
+#include <netcdf.h>
 #include <netcdf_par.h>
 #define HAVE_NETCDF_PAR 1
 #else
