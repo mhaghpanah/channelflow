@@ -138,7 +138,7 @@ if (WITH_NETCDF)
     endif ()
     # Check for the parallel header of NetCDF only if we are building with MPI
     if (WITH_NETCDF STREQUAL "Parallel")
-        CHECK_INCLUDE_FILES(netcdf_par.h HAVE_NETCDF_PAR_H)
+        CHECK_INCLUDE_FILES("netcdf.h;netcdf_par.h" HAVE_NETCDF_PAR_H)
         if (NOT HAVE_NETCDF_PAR_H)
             message(FATAL ERROR "could not include netcdf_par.h [Required by WITH_NETCDF=Parallel]")
         endif ()
